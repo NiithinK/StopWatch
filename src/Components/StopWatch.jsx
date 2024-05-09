@@ -35,13 +35,16 @@ function Stopwatch() {
       .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
   return (
+    <div className='divName'>  
     <div className="App">
       <h1>Stopwatch</h1>
-      <div className="stopwatch">{formatTime()}</div>
+      <div className="stopwatch">Time : {formatTime()}</div>
       <div className="controls">
         <button onClick={startStop}>{running ? 'Stop' : 'Start'}</button>
         <button onClick={reset}>Reset</button>
       </div>
+    </div>
+
     </div>
   );
 }
